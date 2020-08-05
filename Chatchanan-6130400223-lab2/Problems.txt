@@ -1,0 +1,16 @@
+Problems 
+1.Give an example of a website with bad design and explain why you think it is the website with bad design and propose how you can improve them (4 points)
+	
+	• Give the name and the link of the website
+	    ANS:   https://www.lingscars.com/
+
+	• Explain at least two aspects of the website that contribute to a bad design
+	    ANS:    1) This webpage has too much color
+		    2) Too much GIF that is distracting the user
+		    3) Too much unnecessary text
+		    4) Text are hard to read
+
+	• Explain at least two features that you will add or change to improve the design of that website
+	    ANS:    1) Use proper text
+		    2) Use color principles of design
+		    3) Change layout and wipe out the GIFs
