@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj&display=swap");
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+#styled > colgroup > #red {
+  background-color: red;
+}
+
+#styled > colgroup > #yellow {
+  background-color: yellow;
+}
+
+#styled td:nth-child(n + 3) {
+  text-align: right;
+}
+
+caption {
+  text-align: center;
+}
