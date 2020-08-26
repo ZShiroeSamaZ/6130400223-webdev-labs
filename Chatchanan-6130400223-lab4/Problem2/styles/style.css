@@ -1,15 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Taviraj&display=swap');
-   
-div {
-  padding: 5px;
+
+body {
+  margin: 0;
 }
 
+.navBar {
+  background-color: black;
+  overflow: hidden;
+}
+
+.navBar h2 {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 0 0 30;
+}
+
+#unl {
+  background-color: blueviolet;
+
+}
+
+#orl {
+  background-color: black;
+}
+
+.list {
+  margin: 10px;
+}
+
+
 div > #ul{
+  padding: 5px;
   border: 5px solid blue;
   background-color: lightblue;
 }
 
 div > #ol{
+  padding: 5px;
   border: 5px solid green;
   background-color: lightgreen;
 }
