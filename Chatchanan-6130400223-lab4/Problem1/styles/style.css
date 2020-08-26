@@ -5,7 +5,9 @@ body {
   }
 
   h1 {
-    text-align: center;
+    margin: 0 auto;
+    background-color: lightblue;
+    width: fit-content;
   }
 
   p {

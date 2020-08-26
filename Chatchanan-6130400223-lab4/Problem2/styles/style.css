@@ -9,14 +9,14 @@ body {
   overflow: hidden;
 }
 
-.navBar h2 {
+.navBar a {
   float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 12px 30px;
   text-decoration: none;
   font-size: 12px;
-  margin: 0 0 0 30;
+  margin: 0 0 0 20;
 }
 
 #unl {
@@ -24,8 +24,8 @@ body {
 
 }
 
-#orl {
-  background-color: black;
+.navBar a:hover {
+  background-color: blueviolet;
 }
 
 .list {
