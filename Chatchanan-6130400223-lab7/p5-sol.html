@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Book List</title>
+  </head>
+  <body>
+    <h1>My Book List</h1>
+    <div id="books_list">Click to generate my book list</div>
+    <script>
+        var books = [
+       		{
+        			title: 'Sapiens: A Brief History of Humankind',
+         			url: "https://www.goodreads.com/book/show/23692271-sapiens",
+         			author: 'Yuval Noah Harari'
+       		}, {
+         			title: 'The Glass Castle',
+         			url: "https://www.goodreads.com/book/show/7445.The_Glass_Castle",
+        			 author: 'Jeannette Walls'
+       		}
+      ]
+      var bookOl = document.createElement("ol");
+      bookOl.id = "books"
+      document.getElementById("books_list").onclick = () => generate();
+      function generate() {
+        for (let item of books) {
+          let link = document.createElement('a');//init link
+          link.href = item.url
+          link.innerHTML = item.title
+
+          let authorName = document.createElement('span'); //init author
+          authorName.innerHTML = " by " +item.author
+
+          let node = document.createElement('li'); //init li
+          node.style.width = "100%"
+          
+          node.append(link) //add link text to li
+          node.append(authorName) //add author to li
+          bookOl.appendChild(node) //add li to ol
+        }
+        document.body.appendChild(bookOl)
+      }
+      
+    </script>
+  </body>
+</html>

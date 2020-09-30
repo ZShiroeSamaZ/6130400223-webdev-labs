@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Challenge: Create a solar system</title>
+    <style>
+      body {
+        background-color: black;
+        padding: 10px;
+      }
+      .planet {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        background-color: grey;
+      }
+      .moon {
+        z-index: 100000;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: yellow;
+      }
+      .planet_moon_text {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        var planet =  document.createElement('DIV')
+        planet.className = "planet"
+        var moon =  document.createElement('DIV')
+        moon.className = "moon"
+        var text = document.createElement("DIV")
+        text.className = "planet_moon_text"
+        text.textContent = "The planet and the moon"
+        document.body.appendChild(moon)
+        document.body.appendChild(planet)
+        document.body.appendChild(text)
+    </script>
+  </body>
+</html>
