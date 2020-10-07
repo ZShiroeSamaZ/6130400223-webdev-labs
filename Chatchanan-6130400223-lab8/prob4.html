@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script>
+      var elem = document.getElementById("div");
+      var r = 255;
+      var g = 0;
+      var b = 0;
+      function colorChange() {
+        var change = setInterval(frame, 15);
+        function frame() {
+          if ((r == 0) & (g == 0) & (b == 255)) {
+            clearInterval(change);
+          } else {
+            r--;
+            b++;
+            elem.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+          }
+        }
+      }
+      colorChange()
+    </script>
+  </body>
+</html>

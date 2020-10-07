@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Language" content="th" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script type="text/javascript" src="functions/functions.js"></script>
+  </head>
+
+  <body>
+    <button id="stop-button" type="button">Stop</button>
+    <p><span id="seconds">0</span> seconds have gone by!</p>
+    <script>
+      var seconds = document.getElementById("seconds");
+      var countOn = true
+      var curtime = parseInt(seconds.innerHTML)
+      // Make it count up on a timer, calling this function
+      var countUp = function () {
+        curtime += 1;
+        seconds.innerHTML = curtime
+      };
+
+      // How can you make it stop counting?
+      var stopCountUp = function () {
+        countOn = false
+        window.clearInterval(timer)
+      };
+
+      var stopButton = document.getElementById("stop-button");
+      var timer = window.setInterval(countUp, 1000)
+      stopButton.addEventListener("click", stopCountUp);
+    </script>
+  </body>
+</html>

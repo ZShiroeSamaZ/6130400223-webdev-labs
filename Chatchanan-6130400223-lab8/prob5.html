@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script>
+      var elem = document.getElementById("div");
+      var r = 255;
+      var g = 0;
+      var b = 0;
+      var pos = 0;
+      function colorChangeRight() {
+        var change = setInterval(frame, 5);
+        function frame() {
+          if ((r == 255) & (g == 255) & (b == 0)) {
+            clearInterval(change);
+            colorChangeLeft()
+          } else {
+            g ++
+            pos += 200 / 255
+            elem.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            elem.style.marginLeft = pos + "px";
+          }
+        }
+      }
+
+      function colorChangeLeft() {
+        var change = setInterval(frame, 5);
+        function frame() {
+          if ((r == 255) & (g == 0) & (b == 0)) {
+            clearInterval(change);
+            colorChangeRight()
+          } else {
+            g --
+            pos -= 200 / 255
+            elem.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            elem.style.marginLeft = pos + "px";
+          }
+        }
+      }
+      setTimeout(() => {
+        colorChangeRight();
+      }, 1000);
+      
+    </script>
+  </body>
+</html>
