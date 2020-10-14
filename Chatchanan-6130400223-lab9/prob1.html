@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" />
+      <button id="button">Add item</button>
+    </div>
+
+    <ul id="itemList"></ul>
+    <p id="count"></p>
+
+    <script>
+      const addItemButton = document.getElementById("button");
+      addItemButton.addEventListener("click", addItem);
+
+      function getItem() {
+        const itemName = document.getElementById("item");
+        const output = itemName.value;
+        itemName.value = "";
+        return output;
+      }
+
+      function addDelButton(itemName) {
+        return `<button id="${itemName}" class="delButton">Delete</button>`;
+      }
+
+      function update() {
+        const delButton = document.querySelectorAll(".delButton");
+        console.log(delButton.length);
+        for (let i = 0; i < delButton.length; i++) {
+          delButton[i].addEventListener("click", () => {
+            document.getElementById(`${delButton[i].id}`).remove();
+            update() 
+            count++;
+          });
+        }
+        document.getElementById("count").innerHTML =
+          delButton.length <= 1
+            ? `The list has ${delButton.length} item`
+            : `The list has ${delButton.length} items`;
+      }
+
+      function addItem() {
+        const itemName = getItem();
+        const itemList = document.getElementById("itemList");
+        itemList.innerHTML += `<li id="${itemName}">${itemName} ${addDelButton(
+          itemName
+        )}</li>`;
+        update();
+        document.getElementById("item").focus();
+      }
+    </script>
+  </body>
+</html>

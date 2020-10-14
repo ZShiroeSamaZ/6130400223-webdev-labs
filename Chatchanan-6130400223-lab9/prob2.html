@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <h1>List of KKU Faculties</h1>
+    <p id="list"></p>
+    <script>
+      function reArrageJson(jsonFile) {
+        const jsonData = JSON.parse(jsonFile)
+        const studentlist = jsonData.wclass
+        const listInHTML = document.getElementById('list')
+        let count = 1
+        studentlist.forEach(student => {
+          let stuData = student.student
+          let output = `<p>${count}.${stuData.attributes.id} <b>${stuData.name}</b> has skills <i>${stuData.skill}</i></p>`
+          listInHTML.innerHTML += output
+          count++
+          // 1.613040022-3 Chatchanan Pimpanon has skills Programming
+        });
+      }
+
+      var output = document.getElementById("list");
+      fetch("students.json").then((res) => {
+        res.text().then((text) => {
+          output.innerHTML = text
+        });
+      });
+    </script>
+  </body>
+</html>

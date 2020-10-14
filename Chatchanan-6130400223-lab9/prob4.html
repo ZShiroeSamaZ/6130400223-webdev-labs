@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .blue {
+        color: blue;
+      }
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <ol id="list"></ol>
+    <script>
+      function reArrageJson(jsonFile) {
+        const jsonData = JSON.parse(jsonFile);
+        const dataList = jsonData.results;
+        const listInHTML = document.getElementById("list");
+        dataList.forEach((data) => {
+          let output = `<li><p><span class="blue">name = ${data.name}</span></p>
+           <p class="green">location = ${data.geometry.location.lat} ${data.geometry.location.lng}</p></li>`;
+          //1.name = Didines Restaurant and Pub
+          //  location = 16.429085 102.828924
+          listInHTML.innerHTML += output;
+        });
+      }
+
+      var output = document.getElementById("list");
+      fetch("places.json").then((res) => {
+        res.text().then((text) => {
+          reArrageJson(text);
+        });
+      });
+    </script>
+  </body>
+</html>
