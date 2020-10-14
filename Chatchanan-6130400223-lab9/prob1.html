@@ -47,13 +47,15 @@
         for (let i = 0; i < delButton.length; i++) {
           delButton[i].addEventListener("click", () => {
             document.getElementById(`${delButton[i].id}`).remove();
-            update() 
+            update();
             count++;
           });
         }
         document.getElementById("count").innerHTML =
           delButton.length <= 1
-            ? `The list has ${delButton.length} item`
+            ? delButton.length == 0
+              ? ""
+              : `The list has ${delButton.length} item`
             : `The list has ${delButton.length} items`;
       }
 
