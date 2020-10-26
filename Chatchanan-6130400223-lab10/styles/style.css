@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-radius: 50%;
+  border: cyan solid 3px;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  font-size: larger;
+  box-sizing: border-box;
+  background-color: lightgray;
+  color: white;
+}
+
+#button {
+  background-color: rgb(255, 182, 45)
+}
+
+#yellow {
+  background-color: lightyellow;
+}
+
+div.profile > div > p {
+  margin-left: 255px;
+}
+
+#profileImg {
+  width: 238px;
+  height: 238px;
+  border-radius: 100px;
+  border: cyan solid 3px;
+  float: left;
+}
+
+#html {
+  max-width: 40%;
+  background-color: lightskyblue;
+}
+#javaS {
+  max-width: 80%;
+  background-color: lightcoral;
+}
+#python {
+  max-width: 90%;
+  background-color: lightgreen;
+}
+
+.column {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#leftColumn {
+ background-color: grey;
+ width: 70%;
+}
+
+#midColumn {
+  background-color: white;
+  color: white;
+  width: 5%;
+}
+
+#rightColumn {
+ background-color: lightsalmon;
+ width: 25%;
+}
