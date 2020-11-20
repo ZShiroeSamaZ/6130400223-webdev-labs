@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        title="MongoDB"
+        style(type='text/css').
+            *{
+                padding:10px;
+            }
+           .center{
+               text-align:center
+           }
+           .table{
+               display:table
+           }
+           .table-row{
+               display:table-row
+           }
+           .table-cell {
+                display: table-cell;
+                padding: 10px;
+                margin-left:150px;
+                width:300px;
+            }
+            }
+    body
+        h1(class="center") Remaining schedule
+        form(action="/", method="POST" class="table")
+            input(name="date" placeholder="date")
+            input(name="task" placeholder="task")
+            button(type="submit") Submit
+        form(action="/delete", method="POST" class="table")
+            button(type="submit") Delete All Data
+        h1(class="center") Task
+        ul(style="font-size:1.2rem")
+            each info in data
+                li= info.date +" : "+ info.activity

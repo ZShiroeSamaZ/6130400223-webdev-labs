@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        title="LOL"
+        style(type='text/css').
+            *{
+                padding:10px;
+            }
+           .center{
+               text-align:center
+           }
+           .table{
+               display:table
+           }
+           .table-row{
+               display:table-row
+           }
+           .table-cell {
+                display: table-cell;
+                padding: 10px;
+                margin-left:150px;
+                width:300px;
+            }
+            }
+    body
+        h1(class="center") Student Form
+        form(action="/", method="POST" class="table")
+            div(class="table-row")
+                label(for="Name" class="table-cell") Name:
+                input(name="Name" value="Hi" class="table-cell")
+            br
+            div(class="table-row")
+                label(for="Internship" class="table-cell") Internship company:
+                input(name="Internship" value="Express forms" class="table-cell")
+            br
+            div(class="table-row")
+                label(for="Skill" class="table-cell") Skill:
+                input(name="Skill" value="Express forms" class="table-cell")
+            br
+            button(type="submit") Send my greetings
